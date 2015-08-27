@@ -31,7 +31,7 @@ $compileRequest = new Clsi\Request\CompileRequest(
 
 // Optional: Add more resources
 // $compileRequest->addResources(
-//      new Clso\Request\Resource\UrlResource('logo.png', 'http://myserver.com/logo.png')
+//      new Clsi\Request\Resource\UrlResource('logo.png', 'http://myserver.com/logo.png')
 // );
 
 $sender = new Clsi\Bridge\Guzzle\GuzzleCompileRequestSender();
@@ -58,7 +58,7 @@ $compileRequest = new Clsi\Request\CompileRequest(
 
 // Optional: Add more resources
 // $compileRequest->addResources(
-//      new Clso\Request\Resource\UrlResource('logo.png', 'http://myserver.com/logo.png')
+//      new Clsi\Request\Resource\UrlResource('logo.png', 'http://myserver.com/logo.png')
 // );
 
 $compileRequestFactory  = new Clsi\Psr\PsrCompileRequestFactory();
