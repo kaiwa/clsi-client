@@ -37,15 +37,15 @@ class PsrCompileResponseFactory
             throw new ResponseException\InvalidResponseException('The server returned a not parsable response: '.$body);
         }
 
-        if ($decoded->compile->status != 'success') {
-            throw new ResponseException\CompileFailureException(
-                'The LaTeX compiler failed. Please see the server-side compiler log file for details.'
-            );
-        }
-
         if ($decoded->compile->error != '') {
             throw new ResponseException\ErrorResponseException(
                 'The server returned an error message: '.$decoded->compile->error
+            );
+        }
+
+        if ($decoded->compile->status != 'success') {
+            throw new ResponseException\CompileFailureException(
+                'The LaTeX compiler failed. Please see the server-side compiler log file for details.'
             );
         }
 
